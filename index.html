@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+		<title>上拉刷新</title>
+		<style>
+			*{margin:0px;padding:0px;}
+			.passBox{height:60px;width:480px;display:-webkit-box;border:1px solid #dedede;border-radius:15px;box-sizing:border-box;}
+			.passIpt,.ice,.ice2,#passIptCon{height:60px;line-height:60px;}
+			.passIpt{-webkit-box-flex:1;position:relative;}
+			#passIptCon{background:none;outline:0;border:0;display:block;width:100%;box-sizing:border-box;padding:0 10px;}
+			.ice,.ice2{width:60px;text-align:center;line-height:60px;cursor: pointer;}
+			.ice:after{content:"显示";}
+			.ice2:after{content:"隐藏";}
+
+			.passJ{height:58px;width:100%;position:absolute;top:0px;left:0px;box-sizing:border-box;padding:0 10px;color:#ccc;
+				line-height:58px;border:0;outline: 0;background:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="passBox">
+			<div class="passIpt">
+				<input type="password" id="passIptCon" oninput="listen(this);" onpropertychange="listen(this);">
+				<input class="passJ" placeholder="请输入密码" oninput="listen2(this);" onpropertychange="listen2(this);">
+			</div>
+			<div id="iceMain" class="ice"></div>
+		</div>
+			
+	</body>
+</html>
